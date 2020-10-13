@@ -20,6 +20,8 @@ namespace MoodAnalyserProblem
         {
             if (!string.IsNullOrEmpty(message))
                 this.message = message.ToUpper();
+            else if (message == string.Empty)
+                this.message = message;
         }
 
         /// <summary>

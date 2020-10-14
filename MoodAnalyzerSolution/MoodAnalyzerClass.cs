@@ -20,8 +20,7 @@ namespace MoodAnalyserProblem
                 return "SAD";
             else if (message.Contains("HAPPY"))
                 return "HAPPY";
-            else
-                return "NO COMMENTS";
+            
         }
     }
 }

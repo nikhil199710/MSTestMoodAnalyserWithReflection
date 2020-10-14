@@ -18,8 +18,7 @@ namespace MoodAnalyserProblem
 
         public MoodAnalyserClass(string message)
         {
-            if (!string.IsNullOrEmpty(message))
-                this.message = message.ToUpper();
+            this.message = message;
         }
 
         /// <summary>
@@ -43,7 +42,9 @@ namespace MoodAnalyserProblem
                 else
                 {
                     if (this.message.Equals(string.Empty))
+                    {
                         throw new MoodAnalysisCustomException(MoodAnalysisCustomException.ExceptionType.EMPTY_MESSAGE, "Mood should not be EMPTY");
+                    }
                     else
                         throw new NullReferenceException();
                 }
